@@ -1,54 +1,21 @@
-# font-preview
+PC内部に保持されてるフォントを任意文字列でプレビューしてくれるアプリです。
+Vue3で作成しています。
 
-This template should help get you started developing with Vue 3 in Vite.
+# 注意
+当アプリはChromiumが提供する「Local Font Access API」を使用しています。
+https://developer.chrome.com/docs/capabilities/web-apis/local-fonts?hl=ja
 
-## Recommended IDE Setup
+このため、Chromiumブラウザ「Chrome」「Edge」のみでしか動きません。
+また、初回起動時はポップアップで「パソコンのフォントを使用して高品質のコンテンツを作成できます」と記載されたダイアログが出てきます。
+こちらに「許可する」を選んで頂ければ使えるようになります。
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+# セットアップ
+事前準備: 以下が必要です。
+- Node.js実行環境(v25.2.1で動作確認済み)
+- npm(v7.20.3で動作確認済み)
 
-## Recommended Browser Setup
-
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
-```
+1. 当リポジトリをClone
+2. 当ディレクトリで以下を実行:
+   1. `npm install`
+   2. `npm run dev`
+3. http://localhost:5173 へアクセス

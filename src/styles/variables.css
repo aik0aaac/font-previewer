@@ -1,0 +1,13 @@
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f7f7f8;
+  --text: #222;
+  --border: #e5e5e5;
+}
+
+[data-theme='dark'] {
+  --bg: #121212;
+  --bg-soft: #1e1e1e;
+  --text: #eee;
+  --border: #333;
+}

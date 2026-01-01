@@ -147,6 +147,8 @@ function onMouseUp() {
 }
 
 canvas {
+  max-width: 100%;
+  max-height: 90vh;
   background: white;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   cursor: move;

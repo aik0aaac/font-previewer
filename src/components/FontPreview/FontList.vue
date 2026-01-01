@@ -17,6 +17,8 @@
       </button>
     </header>
 
+    <div>全{{ displayFonts.length }}個</div>
+
     <RecycleScroller
       class="scroller"
       :items="displayFonts"
@@ -40,7 +42,6 @@ const fontStore = useFontStore()
 const ui = useUIStore()
 
 await fontStore.loadFonts()
-console.log(fontStore.displayFonts)
 const displayFonts = computed(() => fontStore.displayFonts)
 </script>
 

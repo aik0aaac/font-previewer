@@ -19,3 +19,15 @@ https://developer.chrome.com/docs/capabilities/web-apis/local-fonts?hl=ja
    1. `npm install`
    2. `npm run dev`
 3. http://localhost:5173 へアクセス
+
+# 作りたい機能メモ
+- フォントに対して付加情報を付けれる機能、LocalStorage保持
+  - LocalStorageのデータ紛失に備え、JSONエクスポート機能も
+  - 付加情報の種別
+    - どの言語に対応しているか
+    - フォントスタイル、サンセリフ/ゴシック体など
+    - 商用利用可能か、個人用途のみに限定されるか
+    - タグ、複数個登録可能
+- 付加情報でフィルタリングできる機能
+- 画像プレビュータブにて、お気に入りフォントを削除できる機能
+- お気に入りフォント登録内容を一括削除できる機能

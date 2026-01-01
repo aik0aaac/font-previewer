@@ -9,7 +9,7 @@
           :key="font.postscriptName"
           :style="{ fontFamily: font.family }"
           :class="{ active: canvas.textLayer.fontFamily === font.family }"
-          @click="canvas.setFont(font.family)"
+          @click="canvas.setFont(font.family, font.fullName)"
         >
           {{ font.family }}
         </button>
@@ -117,6 +117,7 @@ select {
   border-radius: 8px;
   border: 1px solid var(--border);
   background: var(--bg-soft);
+  white-space: nowrap;
 }
 
 .font-picker button.active {

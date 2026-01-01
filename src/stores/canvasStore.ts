@@ -6,6 +6,7 @@ export interface TextLayer {
   y: number
   fontSize: number
   fontFamily: string
+  fontFullName: string
   color: string
   writingMode: 'horizontal' | 'vertical'
 }
@@ -22,6 +23,7 @@ export const useCanvasStore = defineStore('canvas', {
       y: 100,
       fontSize: 48,
       fontFamily: 'sans-serif',
+      fontFullName: 'sans-serif',
       color: '#000000',
       writingMode: 'horizontal',
     },
@@ -43,8 +45,9 @@ export const useCanvasStore = defineStore('canvas', {
       this.textLayer.x = x
       this.textLayer.y = y
     },
-    setFont(family: string) {
+    setFont(family: string, fontFullName: string) {
       this.textLayer.fontFamily = family
+      this.textLayer.fontFullName = fontFullName
     },
   },
 })

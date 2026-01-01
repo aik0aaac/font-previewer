@@ -1,11 +1,14 @@
 <template>
   <div class="font-item" :class="isFav ? 'selected' : ''" @click="toggle">
     <div class="meta">
-      <span class="name">{{ font.family }}</span>
+      <span class="name">{{ font.fullName }}</span>
+      <span>{{ font.style }}</span>
     </div>
 
-    <div class="sample" :style="{ fontFamily: `'${font.family}'` }">
-      {{ store.text }}
+    <div class="sample">
+      <span :style="{ fontFamily: `'${font.family}'` }">{{ store.text }}</span
+      >　
+      <span :style="{ fontFamily: `'${font.fullName}'` }">{{ store.text }}</span>
     </div>
   </div>
 </template>

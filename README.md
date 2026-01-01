@@ -20,6 +20,13 @@ https://developer.chrome.com/docs/capabilities/web-apis/local-fonts?hl=ja
    2. `npm run dev`
 3. http://localhost:5173 へアクセス
 
+# 既知の不具合
+画像プレビュー機能にて、フォントの位置を自由に動かす事が出来なくなっています。
+一応、フォントの右斜下らへんをドラッグすれば動かせますが…ガイドラインが出てないため、操作はかなり難解です。
+
+気になる方は[こちら](https://github.com/aik0aaac/font-previewer/commit/fb387fc3349a87ba88b9b10c2ac2538175c4acba)のコミット時点でのコードを利用ください。
+なお、このVerは画像プレビューにて、画像が大きすぎる際に画面からはみ出して表示されるのでお気をつけて。
+
 # 作りたい機能メモ
 - フォントに対して付加情報を付けれる機能、LocalStorage保持
   - LocalStorageのデータ紛失に備え、JSONエクスポート機能も
